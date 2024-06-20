@@ -31,8 +31,8 @@ mongoose.connection.once('open', () => {
 });
 
 app.post('/',async (req: Request, res: Response, next: NextFunction) => {
-    const { Name,Email,Contact,Socials,Industry,Designation} = req.body;
-    const createdForm = await FormModel.create({ Name,Email,Contact,Socials,Industry,Designation});
+    const { Name,Email,Contact,Company,Socials,Industry,Designation} = req.body;
+    const createdForm = await FormModel.create({ Name,Email,Contact,Company,Socials,Industry,Designation});
     res.status(201).json({
       message: "success",
       userId: createdForm._id,

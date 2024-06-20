@@ -31,8 +31,8 @@ mongoose.connection.once('open', () => {
     console.log('Connected to MongoDB');
 });
 app.post('/', (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
-    const { Name, Email, Contact, Socials, Industry, Designation } = req.body;
-    const createdForm = yield FormModel.create({ Name, Email, Contact, Socials, Industry, Designation });
+    const { Name, Email, Contact, Company, Socials, Industry, Designation } = req.body;
+    const createdForm = yield FormModel.create({ Name, Email, Contact, Company, Socials, Industry, Designation });
     res.status(201).json({
         message: "success",
         userId: createdForm._id,
