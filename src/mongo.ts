@@ -5,7 +5,7 @@ import mongoose from "mongoose";
 
 dotenv.config({ path: 'config.env' });
 
-const url = process.env.DatabaseUrl || 'default-fallback-url';
+const url = 'mongodb+srv://PPS:industries@cluster0.7kpj7ae.mongodb.net/?retryWrites=true&w=majority';
 
 mongoose.connect(url);
   
